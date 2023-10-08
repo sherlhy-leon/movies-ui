@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Movie } from 'src/app/entities/movie';
 import { environment } from 'src/app/environment/environment';
 
@@ -13,6 +13,8 @@ export class MoviesService {
   constructor(private readonly http: HttpClient) { }
 
   getPlayingNowMovies(): Observable<Movie[]> {
-      return this.http.get<Movie[]>(`${this.url}/now_playing`);
+      return this.http.get<{movies: Movie[]}>(`${this.url}/now_playing`).pipe(
+        map(val => val.movies)
+      );
   }
 }

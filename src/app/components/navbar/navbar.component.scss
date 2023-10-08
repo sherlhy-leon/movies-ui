@@ -10,3 +10,13 @@
 .sidebar {
   width: 400px;
 }
+
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu button {
+  font-size: large;
+}

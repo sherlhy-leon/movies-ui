@@ -1,3 +1,3 @@
 export const environment = {
-  moviesApiUrl: 'https://api.example.com/myenv',
+  moviesApiUrl: 'http://localhost:3000/movies',
 };

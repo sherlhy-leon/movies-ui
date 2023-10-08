@@ -12,6 +12,7 @@ import { MovieDetailsPageComponent } from './pages/movie-details-page/movie-deta
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { MaterialModule } from './material.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     LoginPageComponent,
     MovieDetailsPageComponent,
     NotFoundPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

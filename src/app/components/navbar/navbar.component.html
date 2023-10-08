@@ -15,8 +15,12 @@
 
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer [mode]='"over"' class="sidebar" mode="side">
-    <h1>Playing now</h1>
-    <h1>Popular</h1>
+    <div class="menu">
+      <button mat-button>Playing Now</button>
+      <button mat-button>Popular</button>
+    </div>
   </mat-drawer>
-  <mat-drawer-content><router-outlet></router-outlet> </mat-drawer-content>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
 </mat-drawer-container>
