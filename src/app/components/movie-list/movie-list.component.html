@@ -1,6 +1,6 @@
 
 <div class="container">
-  <mat-card  *ngFor="let movie of movies" class="movie-card">
+  <mat-card  *ngFor="let movie of movies" class="movie-card" (click)="showDetails(movie)">
     <img class="post overlay" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{movie.poster_path}}" width="100%"/>
     <mat-card-content>
       <p>{{ movie.title }}</p>

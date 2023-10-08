@@ -1,1 +1,12 @@
-<p>movie-details-page works!</p>
+<mat-card class="container">
+  <div class="poster-card">
+    <img class="poster" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{movie.poster_path}}" width="100%" />
+    <div class="details">
+      <span><b>Cast</b></span>
+      <p> {{castNames}}. </p>
+      <span><b>Crew</b></span>
+      <p> {{crewNames}}. </p>
+    </div>
+    <button class="back-button" color="primary" mat-raised-button (click)="goBack()">Back</button>
+  </div>
+</mat-card>

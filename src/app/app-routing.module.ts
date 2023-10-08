@@ -15,7 +15,7 @@ const routes: Routes = [
     component: PopularPageComponent,
   },
   {
-    path: "movies/details",
+    path: "movies/:id/details",
     component: MovieDetailsPageComponent,
   },
   { path: '',   redirectTo: '/movies/playingnow', pathMatch: 'full' },

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movie } from 'src/app/entities/movie';
 
 @Component({
@@ -9,5 +10,9 @@ import { Movie } from 'src/app/entities/movie';
 export class MovieListComponent {
 
   @Input() movies: Movie[] | null = [];
-  constructor() {}
+  constructor(private router: Router) {}
+
+  showDetails(movie: Movie){
+    this.router.navigateByUrl(`movies/${movie.id}/details`, { state: { movie }});
+  }
 }
