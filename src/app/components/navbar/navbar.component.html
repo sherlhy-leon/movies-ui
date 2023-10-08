@@ -3,7 +3,7 @@
     (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
+  <span>{{title}}</span>
   <span class="example-spacer"></span>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
@@ -16,8 +16,8 @@
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer [mode]='"over"' class="sidebar" mode="side">
     <div class="menu">
-      <button mat-button>Playing Now</button>
-      <button mat-button>Popular</button>
+      <button mat-button [routerLink]="'/movies/playingnow'" (click)="drawer.toggle()">Playing Now</button>
+      <button mat-button [routerLink]="'/movies/popular'" (click)="drawer.toggle()">Popular</button>
     </div>
   </mat-drawer>
   <mat-drawer-content>

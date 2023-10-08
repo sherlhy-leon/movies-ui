@@ -17,4 +17,10 @@ export class MoviesService {
         map(val => val.movies)
       );
   }
+
+  getPopularMovies(): Observable<Movie[]> {
+    return this.http.get<{movies: Movie[]}>(`${this.url}/popular`).pipe(
+      map(val => val.movies)
+    );
+}
 }

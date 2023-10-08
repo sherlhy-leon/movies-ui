@@ -11,7 +11,7 @@ const routes: Routes = [
     component: PlayingnowPageComponent,
   },
   {
-    path: "movies/populars",
+    path: "movies/popular",
     component: PopularPageComponent,
   },
   {

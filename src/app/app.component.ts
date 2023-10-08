@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movies-app';
+
+  constructor(private readonly zone: NgZone, private router: Router) {
+    // this.zone.run(() => {
+    //   this.router.initialNavigation();
+    // })
+  }
 }
