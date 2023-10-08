@@ -10,6 +10,8 @@ import { PopularPageComponent } from './pages/popular-page/popular-page.componen
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { MovieDetailsPageComponent } from './pages/movie-details-page/movie-details-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { MaterialModule } from './material.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +20,16 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
     PopularPageComponent,
     LoginPageComponent,
     MovieDetailsPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
